@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class Calculator {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("=== Smart Calculator ===");
+        System.out.print("Pehla number likho: ");
+        double num1 = input.nextDouble(); 
+        
+        System.out.print("Dusra number likho: "); 
+        double num2 = input.nextDouble(); 
+        
+        double sum = num1 + num2;
+        double minus = num1 - num2;
+        double zarb = num1 * num2;
+        double taqseem = num1 / num2; 
+        
+    
+        System.out.println("\nKya karna hai?");
+        System.out.println("1: Jama");
+        System.out.println("2: Minus"); 
+        System.out.println("3: Zarb");
+        System.out.println("4: Taqseem");
+        System.out.print("Option number likho: ");
+        int choice = input.nextInt(); 
+
+  
+        switch(choice) {
+            case 1: 
+                System.out.println("Jawab: " + sum); 
+                break;
+            case 2: 
+                System.out.println("Jawab: " + minus); 
+                break;
+            case 3: 
+                System.out.println("Jawab: " + zarb); 
+                break;
+            case 4: 
+                System.out.println("Jawab: " + taqseem); 
+                break;
+            default: 
+                System.out.println("Ghalat option chuna hai");
+        }
+        
+        input.close();
+    }
+}
